@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "testpackage-aruninvitae"
+version = "0.1.0"
+description = "Test Package"
+authors = ["Arun Nampally <arun.nampally@invitae.com>"]
+license = "Apache-2.0"
+packages = [
+  { include = "testpackage"},
+]
+readme = "README.md"
+homepage = ""
+repository = "https://github.com/aruninvitae/testpackage-aruninvitae"
+documentation = ""
+keywords = [
+    "testing",
+    "poetry",
+    "Github actions",
+    "docker",
+    "pytest",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+junit_family = "xunit2"
+addopts = '--junitxml=reports/junit/pytests.xml --cov=testpackage --cov-report term-missing --cov-report xml:reports/coverage/coverage.xml'
