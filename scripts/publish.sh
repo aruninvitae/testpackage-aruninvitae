@@ -1,2 +1,1 @@
-poetry config http-basic.testpypi '__token__' $PUBLISH_TOKEN
-poetry publish --build -r testpypi
+poetry publish --build --username '__token__' --password $PUBLISH_TOKEN -r testpypi
