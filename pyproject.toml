@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "testpackage-aruninvitae"
-version = "0.1.0"
+version = "0.2.0"
 description = "Test Package"
 authors = ["Arun Nampally <arun.nampally@invitae.com>"]
 license = "Apache-2.0"

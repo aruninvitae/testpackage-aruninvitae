@@ -2,11 +2,13 @@ FROM python:3-slim
 
 WORKDIR /testpackage-aruninvitae
 
+COPY README.md ./
+COPY scripts/publish.sh ./
+COPY poetry.toml ./
+
 RUN pip install poetry
 RUN poetry config virtualenvs.create false
 
-COPY README.md ./
-COPY poetry.toml ./
 COPY poetry.lock ./
 COPY pyproject.toml ./
 
