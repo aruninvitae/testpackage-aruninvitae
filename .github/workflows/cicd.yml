@@ -36,4 +36,4 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         env:
           PUBLISH_TOKEN: ${{ secrets.TESTPYPI_API_TOKEN }}
-        run: docker run testpackage-aruninvitae:$GITHUB_SHA publish.sh
+        run: docker run -e PUBLISH_TOKEN="$PUBLISH_TOKEN" testpackage-aruninvitae:$GITHUB_SHA sh publish.sh
